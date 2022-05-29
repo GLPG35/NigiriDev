@@ -12,10 +12,18 @@
     position: relative;
 }
 
+.container1 .hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(175deg, #ff5548, #b73743);
+    opacity: 0.8;
+}
+
 .container1 .hero .pic {
     width: 100%;
     height: 100%;
-    opacity: 0.3;
 }
 
 .container1 .hero .pic img {
@@ -28,7 +36,7 @@
     position: absolute;
     font-size: clamp(3em, calc(-0.875em + 8.333vw), 4em);
     font-weight: 900;
-    color: #ff5548;
+    color: var(--bg-color);
     text-align: center;
 }
 

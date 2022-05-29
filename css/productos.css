@@ -9,7 +9,7 @@
 }
 
 .container1 h2 {
-    font-size: 3em;
+    font-size: clamp(2em, calc(-0.875em + 8.333vw), 3em);
     color: #b73743;
     font-weight: 800;
     text-align: center;
@@ -83,7 +83,7 @@
 }
 
 .container2 h2 {
-    font-size: 3em;
+    font-size: clamp(2em, calc(-0.875em + 8.333vw), 3em);
     color: #b73743;
     font-weight: 800;
     text-align: center;
@@ -122,7 +122,7 @@
 }
 
 .container2 .pContainer .packaging .info h3 {
-    font-size: 2em;
+    font-size: clamp(1.5em, calc(-0.875em + 8.333vw), 2em);
     font-weight: 700;
     color: #ff5548;
 }
@@ -130,7 +130,7 @@
 .container2 .pContainer .packaging .info p {
     font-size: 1em;
     font-weight: 600;
-    color: #1b1b1b;
+    color: var(--color)
 }
 
 .container2 .pContainer .packaging .pic {

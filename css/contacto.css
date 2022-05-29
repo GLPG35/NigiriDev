@@ -43,6 +43,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 1em;
+    padding: 2em;
 }
 
 .container1 .contact form input {
@@ -52,10 +53,16 @@
     outline: none;
     border-radius: 50vh;
     width: 100%;
-    background: linear-gradient(145deg, #d8d8d8, #ffffff);
-    box-shadow:  10px 10px 20px #a8a8a8,
-        -10px -10px 20px #ffffff;
+    background: var(--input-bg);
+    box-shadow: 10px 10px 20px var(--shadow-1),
+    -5px -5px 10px var(--shadow-2);
     grid-column: span 2;
+    transition: 0.2s ease-out;
+    border: 2px solid #ff554800;
+}
+
+.container1 .contact form input:focus {
+    border: 2px solid #ff5448bb;
 }
 
 .container1 .contact form .subject,
@@ -72,9 +79,15 @@
     width: 100%;
     height: 15em;
     border-radius: 15px;
-    background: linear-gradient(145deg, #d8d8d8, #ffffff);
-    box-shadow:  10px 10px 20px #a8a8a8,
-        -10px -10px 20px #ffffff;
+    background: var(--input-bg);
+    box-shadow: 10px 10px 20px var(--shadow-1),
+    -5px -5px 10px var(--shadow-2);
+    border: 2px solid #ff554800;
+    transition: 0.2s ease-out;
+}
+
+.container1 .contact form textarea:focus {
+    border: 2px solid #ff5548bb;
 }
 
 .container1 .contact form button {
@@ -84,13 +97,40 @@
     justify-self: center;
     border: none;
     outline: none;
-    background-color: #ff5548;
+    background-color: var(--button);
     color: #f0f0f0;
     font-weight: 600;
     height: 3em;
     border-radius: 50vh;
-    transition: 0.2s ease-out;
-    box-shadow:  10px 10px 20px #a8a8a8;
+    transition: transform 0.2s ease-out;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container1 .contact form button::before {
+    position: absolute;
+    content: '';
+    width: 95%;
+    height: 100%;
+    top: 0;
+    background-color: var(--button-ps);
+    border-radius: 50vh;
+    z-index: -1;
+    transition: 0.5s ease-out;
+}
+
+.container1 .contact form button::after {
+    position: absolute;
+    content: '';
+    width: 85%;
+    height: 100%;
+    top: 0;
+    background-color: var(--button-ps);
+    border-radius: 50vh;
+    z-index: -1;
+    transition: 0.5s ease-out;
 }
 
 .container1 .contact form button:hover {
@@ -98,9 +138,25 @@
     cursor: pointer;
 }
 
+.container1 .contact form button:hover::before {
+    transform: translateY(5px);
+}
+
+.container1 .contact form button:hover::after {
+    transform: translateY(10px);
+}
+
 .container1 .contact form button:active {
     transform: scale(0.9);
     cursor: pointer;
+}
+
+.container1 .contact form button:active::before {
+    transform: translateY(0);
+}
+
+.container1 .contact form button:active::after {
+    transform: translateY(0);
 }
 
 @media (max-width: 800px) {

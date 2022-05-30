@@ -11,8 +11,7 @@
     --button-ps: #ff554880;
 }
 
-/* @media (prefers-color-scheme: dark) {
-    :root {
+[data-theme="dark"] {
         --bg-color: #1a1a1a;
         --bg-color2: #1a1a1aaa;
         --color: #c0c0c0;
@@ -21,12 +20,11 @@
         --shadow-2: #0c0c0c;
         --button: #b73743;
         --button-ps: #b7374380;
-    }
+}
 
-    .map {
-        box-shadow: 10px 10px 10px #0c0c0c80 !important;
-    }
-} */
+[data-theme="dark"] .map {
+    box-shadow: 10px 10px 10px #0c0c0c80 !important;
+}
 
 *, *::before, *::after {
     margin: 0;

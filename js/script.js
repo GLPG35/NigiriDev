@@ -1,6 +1,8 @@
 const colorScheme = window.matchMedia('(prefers-color-scheme: dark)')
 const toggleSwitch = document.querySelector('.inputToggle')
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
+const icon = document.querySelector('.icon')
+const menu = document.querySelector('.header ul')
 
 const isChecked = () => {
     if (toggleSwitch.checked) {
@@ -25,4 +27,24 @@ if (currentTheme) {
     }
 }
 
+const responsive = () => {
+    if (window.innerWidth <= 800) {
+        icon.style.pointerEvents = 'all'
+    } else {
+        icon.style.pointerEvents = 'none'
+    }
+}
+
+responsive()
+
+const menuToggle = () => {
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active')
+    } else {
+        menu.classList.add('active')
+    }
+}
+
 toggleSwitch.addEventListener('change', isChecked)
+icon.addEventListener('click', menuToggle)
+window.addEventListener('resize', responsive)

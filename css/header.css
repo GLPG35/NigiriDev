@@ -81,7 +81,7 @@ body {
 }
 
 .header .icon img {
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: 100%;
 }
@@ -91,6 +91,7 @@ body {
     display: flex;
     gap: 0.5em;
     text-transform: uppercase;
+    margin-left: auto;
 }
 
 .header ul a {
@@ -110,6 +111,69 @@ body {
 .header ul a:hover {
     background-color: #ff5448cc;
     color: var(--bg-color);
+}
+
+.header .themeSwitcher {
+    height: 50%;
+    aspect-ratio: 2 / 1;
+    margin-left: 1em;
+}
+
+.header .themeSwitcher .toggle label:hover {
+    cursor: pointer;
+}
+
+.header .themeSwitcher input {
+    display: none;
+}
+
+.header .themeSwitcher .toggle {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 0.2em;
+    background-color: var(--bg-color);
+    border-radius: 50vh;
+    overflow: hidden;
+    border: 2px solid #c0c0c080;
+}
+
+.header .themeSwitcher .toggle label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.header .themeSwitcher .toggle .circle {
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 3px solid #ff5448cc;
+    background-color: var(--bg-color);
+    transform: translateX(calc(150% - 0.2em));
+    transition: 0.3s cubic-bezier(.47,1.64,.41,.8);
+    pointer-events: none;
+    position: absolute;
+}
+
+.header .themeSwitcher input:checked + .toggle .circle {
+    transform: translateX(0);
+    border: 3px solid #685f93;
+}
+
+.header .themeSwitcher .toggle .sun {
+    height: 70%;
+    aspect-ratio: 1 / 1;
+    margin-left: 0.1em;
+}
+
+.header .themeSwitcher .toggle .moon {
+    height: 70%;
+    aspect-ratio: 1 / 1;
+    margin-right: 0.1em;
 }
 
 .footer {
@@ -156,13 +220,20 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 2em;
+        gap: 1em;
         top: 0;
         left: 0;
-        background-color: #b73743;
+        background-color: #b73743f0;
         font-size: 1.2em;
-        transform: scaleX(0);
+        transform: translateX(-100%);
         transform-origin: left;
+        transition: 0.3s ease-out;
+    }
+
+    .header ul li {
+        width: 50%;
+        display: flex;
+        align-items: center;
     }
     
     .header ul a {

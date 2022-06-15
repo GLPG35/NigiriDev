@@ -2,7 +2,7 @@ const colorScheme = window.matchMedia('(prefers-color-scheme: dark)')
 const toggleSwitch = document.querySelector('.inputToggle')
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
 const icon = document.querySelector('.icon')
-const menu = document.querySelector('.header ul')
+const menu = document.querySelector('header ul')
 
 const isChecked = () => {
     if (toggleSwitch.checked) {

@@ -53,7 +53,7 @@ body {
     background-image: url('../images/pattern.webp');
     z-index: -1;
     position: absolute;
-    background-size: 40%;
+    background-size: 35em;
     opacity: 0.1;
 }
 

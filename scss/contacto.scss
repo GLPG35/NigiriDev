@@ -1,0 +1,168 @@
+@use 'header';
+
+.container1 {
+    min-height: calc(100vh - 4em);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .hero {
+        width: 100%;
+        height: 10em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(175deg, #ff5548, #b73743);
+
+        h2 {
+            color: #f0f0f0;
+            font-size: clamp(0.8em, calc(-0.875em + 8.333vw), 1em);
+            font-weight: 700;
+            opacity: 0.8;
+        }
+
+        h1 {
+            color: #f0f0f0;
+            font-size: clamp(2em, calc(-0.875em + 8.333vw), 3em);
+            font-weight: 900;
+        }
+    }
+
+    .contact {
+        width: 100%;
+        height: calc(100% - 10em);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        form {
+            width: 40%;
+            height: max-content;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 1em;
+            padding: 2em;
+
+            input {
+                height: 3em;
+                padding-inline: 1em;
+                border: none;
+                outline: none;
+                border-radius: 50vh;
+                width: 100%;
+                background: var(--input-bg);
+                box-shadow: 10px 10px 20px var(--shadow-1),
+                -5px -5px 10px var(--shadow-2);
+                grid-column: span 2;
+                transition: 0.2s ease-out;
+                border: 2px solid #ff554800;
+
+                &:focus {
+                    border: 2px solid #ff5448bb;
+                }
+            }
+
+            .subject,
+            textarea {
+                grid-column: span 4;
+            }
+
+            textarea {
+                resize: none;
+                border: none;
+                outline: none;
+                font-family: 'Open Sans', sans-serif;
+                padding: 1em;
+                width: 100%;
+                height: 15em;
+                border-radius: 15px;
+                background: var(--input-bg);
+                box-shadow: 10px 10px 20px var(--shadow-1),
+                -5px -5px 10px var(--shadow-2);
+                border: 2px solid #ff554800;
+                transition: 0.2s ease-out;
+
+                &:focus {
+                    border: 2px solid #ff5548bb;
+                }
+            }
+
+            button {
+                grid-column: 2 / 4;
+                width: 50%;
+                min-width: 6em;
+                justify-self: center;
+                border: none;
+                outline: none;
+                background-color: var(--button);
+                color: #f0f0f0;
+                font-weight: 600;
+                height: 3em;
+                border-radius: 50vh;
+                transition: transform 0.2s ease-out;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 95%;
+                    height: 100%;
+                    top: 0;
+                    background-color: var(--button-ps);
+                    border-radius: 50vh;
+                    z-index: -1;
+                    transition: 0.5s ease-out;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 85%;
+                    height: 100%;
+                    top: 0;
+                    background-color: var(--button-ps);
+                    border-radius: 50vh;
+                    z-index: -1;
+                    transition: 0.5s ease-out;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+
+                    &::before {
+                        transform: translateY(5px);
+                    }
+
+                    &::after {
+                        transform: translateY(10px);
+                    }
+                }
+
+                &:active {
+                    transform: scale(0.9);
+
+                    &::before,
+                    &::after {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .container1 {
+        .contact {
+            form {
+                width: 85%;
+            }
+        }
+    }
+}

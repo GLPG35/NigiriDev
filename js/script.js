@@ -45,6 +45,11 @@ const menuToggle = () => {
     }
 }
 
+window.addEventListener('load', () => {
+    document.querySelector('.loader').style.opacity = 0
+    document.querySelector('.loader').style.visibility = 'hidden'
+})
+
 toggleSwitch.addEventListener('change', isChecked)
 icon.addEventListener('click', menuToggle)
 window.addEventListener('resize', responsive)

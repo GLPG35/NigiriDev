@@ -38,6 +38,85 @@
   border-radius: 50vh;
 }
 
+@keyframes eating {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  8% {
+    transform: scale(1) rotate(0);
+  }
+  28% {
+    transform: scale(1) rotate(15deg);
+  }
+  48% {
+    transform: scale(1) rotate(-15deg);
+  }
+  68% {
+    transform: scale(1) rotate(15deg);
+  }
+  69% {
+    opacity: 1;
+    transform: scale(1) rotate(15deg);
+  }
+  70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes eating2 {
+  0% {
+    fill: #ffffff;
+  }
+  9% {
+    fill: #ffffff;
+  }
+  10% {
+    fill: #000000;
+  }
+  90% {
+    fill: #000000;
+  }
+  95% {
+    fill: #ffffff;
+  }
+}
+@keyframes eating3 {
+  0% {
+    fill: #ffffff;
+  }
+  29% {
+    fill: #ffffff;
+  }
+  30% {
+    fill: #000000;
+  }
+  90% {
+    fill: #000000;
+  }
+  95% {
+    fill: #ffffff;
+  }
+}
+@keyframes eating4 {
+  0% {
+    fill: #ffffff;
+  }
+  49% {
+    fill: #ffffff;
+  }
+  50% {
+    fill: #000000;
+  }
+  90% {
+    fill: #000000;
+  }
+  95% {
+    fill: #ffffff;
+  }
+}
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--bg-color);
@@ -45,6 +124,35 @@ body {
 }
 body img, body svg {
   vertical-align: initial;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  background-color: var(--bg-color);
+  transition: 0.2s ease-out;
+}
+.loader svg {
+  width: 20em;
+  max-width: 70%;
+  animation: eating 4s infinite forwards;
+}
+.loader svg .group1 {
+  fill: #ffffff;
+  animation: eating2 4s infinite forwards;
+}
+.loader svg .group2 {
+  fill: #ffffff;
+  animation: eating3 4s infinite forwards;
+}
+.loader svg .group3 {
+  fill: #ffffff;
+  animation: eating4 4s infinite forwards;
 }
 
 .pattern {
@@ -65,7 +173,6 @@ header {
   align-items: center;
   padding-inline: 1em;
   font-weight: 600;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: var(--bg-color2);
@@ -87,8 +194,7 @@ header .icon:active {
   transform: scale(0.9) rotate(-10deg);
 }
 header .icon img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   width: 100%;
   height: 100%;
 }
@@ -185,8 +291,6 @@ footer {
 }
 footer .social {
   height: 100%;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   display: flex;
   gap: 1em;
@@ -201,8 +305,7 @@ footer .social .pic a {
   height: 100%;
 }
 footer .social .pic img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -267,8 +370,7 @@ footer .social .pic img {
   overflow: hidden;
 }
 .container1 .subContainer1 .benefit .pic img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -305,4 +407,6 @@ footer .social .pic img {
 .container1 .subContainer1 .benefit .info {
     width: 100%;
   }
-}/*# sourceMappingURL=beneficios.css.map */
+}
+
+/*# sourceMappingURL=beneficios.css.map */

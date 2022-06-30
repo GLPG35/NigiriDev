@@ -41,25 +41,19 @@
         }
     }
 
-    .subContainer1 {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: max-content;
+    .container-fluid {
         padding: 2em;
         gap: 4em;
 
         .map {
-            width: 50%;
             height: 25em;
             border-radius: 25px;
             overflow: hidden;
             box-shadow: 10px 10px 10px #1b1b1b30;
+            padding: 0;
         }
 
         .info {
-            width: 50%;
             height: 25em;
             display: flex;
             flex-direction: column;
@@ -86,17 +80,16 @@
 
 @media (max-width: 800px) {
     .container1 {
-        .subContainer1 {
-            flex-direction: column-reverse;
-
+        .container-fluid {
             .map {
                 width: 100%;
+                order: 2;
             }
 
             .info {
                 height: 15em;
                 width: 100%;
-                justify-content: flex-end;
+                justify-content: center;
             }
         }
     }

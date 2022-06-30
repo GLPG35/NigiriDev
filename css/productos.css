@@ -417,69 +417,69 @@ footer .social .pic img {
   font-weight: 800;
   text-align: center;
 }
-.container2 .pContainer {
-  width: 100%;
-  height: max-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3em;
-}
-.container2 .packaging {
+.container2 .row {
   width: 100%;
   height: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0;
+  padding-left: 5em;
+  margin-bottom: 3em;
 }
-.container2 .packaging.second {
-  flex-direction: row-reverse;
-  gap: 5em;
+.container2 .row:last-child {
+  margin-bottom: 0;
 }
-.container2 .packaging .info {
+.container2 .row.second {
+  padding-left: 2em;
+}
+.container2 .row .info {
   width: 40%;
   height: max-content;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
-.container2 .packaging .info h3 {
+.container2 .row .info h3 {
   font-size: clamp(1.5em, -0.875em + 8.333vw, 2em);
   font-weight: 700;
   color: #ff5548;
 }
-.container2 .packaging .info p {
+.container2 .row .info p {
   font-size: 1em;
   font-weight: 600;
   color: var(--color);
 }
-.container2 .packaging .pic {
+.container2 .row .pic {
   width: 45%;
   height: max-content;
 }
-.container2 .packaging .pic img {
+.container2 .row .pic img {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
 
 @media (max-width: 800px) {
-  .container2 .pContainer .packaging {
+  .container2 .container-fluid-lg .row {
     flex-direction: column;
     gap: 5em;
+    padding-left: 0;
   }
-  .container2 .pContainer .packaging.second {
+  .container2 .container-fluid-lg .row.second {
     flex-direction: column;
   }
-  .container2 .pContainer .packaging .info {
+  .container2 .container-fluid-lg .row.second .order-2 {
+    order: initial !important;
+  }
+  .container2 .container-fluid-lg .row .info {
     width: 90%;
   }
-  .container2 .pContainer .packaging .info h3, .container2 .pContainer .packaging .info p {
+  .container2 .container-fluid-lg .row .info h3, .container2 .container-fluid-lg .row .info p {
     text-align: center;
   }
-  .container2 .pContainer .packaging .pic {
+  .container2 .container-fluid-lg .row .pic {
     width: 70%;
     height: max-content;
   }

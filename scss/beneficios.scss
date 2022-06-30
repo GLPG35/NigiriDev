@@ -14,26 +14,21 @@
         color: #b73743;
     }
 
-    .subContainer1 {
+    .container-fluid {
         display: flex;
         flex-direction: column;
         gap: 2em;
+        margin: 0;
 
-        .benefit {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .row {
             gap: 2em;
-
-            &:nth-child(even) {
-                flex-direction: row-reverse;
-            }
 
             .pic {
                 width: 40%;
                 height: 15em;
                 border-radius: 25px;
                 overflow: hidden;
+                padding: 0;
 
                 img {
                     object-fit: cover;
@@ -69,14 +64,12 @@
             text-align: center;
         }
 
-        .subContainer1 {
+        .container-fluid {
             gap: 5em;
 
-            .benefit {
-                flex-direction: column;
-
-                &:nth-child(even) {
-                    flex-direction: column;
+            .row {
+                .order-2 {
+                    order: initial !important;
                 }
 
                 .pic,

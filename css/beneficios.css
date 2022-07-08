@@ -374,6 +374,7 @@ footer .social .pic img {
   width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1em;
 }
 .container1 .container-fluid .row .info h3 {

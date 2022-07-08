@@ -358,7 +358,7 @@ footer .social .pic img {
 }
 .container1 .hero h1 {
   font-size: clamp(3em, -0.875em + 8.333vw, 4em);
-  font-weight: 900;
+  font-weight: 800;
   text-transform: uppercase;
   color: #b73743;
 }

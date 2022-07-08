@@ -373,15 +373,141 @@ footer .social .pic img {
   height: 80%;
   overflow: hidden;
   border-radius: 25px;
-}
-.container1 .subContainer1 .item .thumb img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
   transition: 0.2s ease-out;
 }
-.container1 .subContainer1 .item .thumb img:hover {
-  transform: scale(1.1);
+.container1 .subContainer1 .item .thumb.t1 {
+  background-image: url("../images/menu1.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t1:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t2 {
+  background-image: url("../images/menu2.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t2:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t3 {
+  background-image: url("../images/menu3.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t3:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t4 {
+  background-image: url("../images/menu4.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t4:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t5 {
+  background-image: url("../images/menu5.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t5:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t6 {
+  background-image: url("../images/menu6.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t6:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t7 {
+  background-image: url("../images/menu7.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t7:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t8 {
+  background-image: url("../images/menu8.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t8:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t9 {
+  background-image: url("../images/menu9.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t9:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t10 {
+  background-image: url("../images/menu10.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t10:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t11 {
+  background-image: url("../images/menu11.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t11:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t12 {
+  background-image: url("../images/menu12.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t12:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t13 {
+  background-image: url("../images/menu13.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t13:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t14 {
+  background-image: url("../images/menu14.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t14:hover {
+  background-size: 110%;
+  filter: saturate(150%);
+}
+.container1 .subContainer1 .item .thumb.t15 {
+  background-image: url("../images/menu15.webp");
+  background-size: 100%;
+  background-position: center;
+}
+.container1 .subContainer1 .item .thumb.t15:hover {
+  background-size: 110%;
   filter: saturate(150%);
 }
 .container1 .subContainer1 .item span {

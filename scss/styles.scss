@@ -1,4 +1,14 @@
 @use 'header';
+@use 'mixins';
+
+$OpenSans: (
+    'light': 300,
+    'regular': 400,
+    'medium': 500,
+    'semibold': 600,
+    'bold': 700,
+    'extrabold': 800
+);
 
 .container1 {
     width: 100%;
@@ -23,15 +33,15 @@
         text-align: right;
 
         h1 {
-            font-size: clamp(3em, calc(-0.875em + 8.333vw), 4em);
-            font-weight: 900;
+            @include mixins.clamp(3em, 4em);
+            font-weight: map-get($OpenSans, 'extrabold');
             text-transform: uppercase;
             color: #b73743;
         }
 
         span {
-            font-size: clamp(1em, calc(-0.875em + 8.333vw), 1.5em);
-            font-weight: 600;
+            @include mixins.clamp(1em, 1.5em);
+            font-weight: map-get($OpenSans, 'semibold');
             color: #ff5548;
         }
     }
@@ -46,9 +56,9 @@
     gap: 2em;
 
     h2 {
-        font-size: clamp(1.8em, calc(-0.875em + 8.333vw), 2.5em);
+        @include mixins.clamp(1.8em, 2.5em);
         color: #b73743;
-        font-weight: 700;
+        font-weight: map-get($OpenSans, 'bold');
     }
 
     .subContainer1, .container-fluid {
@@ -78,7 +88,7 @@
             span {
                 text-align: center;
                 font-size: 1.8em;
-                font-weight: 800;
+                font-weight: map-get($OpenSans, 'extrabold');
                 color: #ff5548;
                 position: absolute;
                 z-index: 2;

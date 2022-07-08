@@ -296,15 +296,15 @@ footer .social {
   gap: 1em;
   align-items: center;
 }
-footer .social .pic {
+footer .social .pic, footer .social .container1 .hero .pic img, .container1 .hero .pic footer .social img {
   height: 50%;
   aspect-ratio: 1/1;
 }
-footer .social .pic a {
+footer .social .pic a, footer .social .container1 .hero .pic img a, .container1 .hero .pic footer .social img a {
   width: 100%;
   height: 100%;
 }
-footer .social .pic img {
+footer .social .pic img, footer .social .container1 .hero .pic img img, .container1 .hero .pic footer .social img img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -356,14 +356,12 @@ footer .social .pic img {
   background: linear-gradient(175deg, #ff5548, #b73743);
   opacity: 0.8;
 }
-.container1 .hero .pic {
+.container1 .hero .pic, .container1 .hero .pic img {
   width: 100%;
   height: 100%;
 }
 .container1 .hero .pic img {
   object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 .container1 .hero h1 {
   position: absolute;

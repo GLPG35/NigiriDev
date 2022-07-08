@@ -1,4 +1,5 @@
 @use 'header';
+@use 'mixins';
 
 .container1 {
     width: 100%;
@@ -26,15 +27,14 @@
             height: 100%;
 
             img {
+                @extend .pic;
                 object-fit: cover;
-                width: 100%;
-                height: 100%;
             }
         }
 
         h1 {
             position: absolute;
-            font-size: clamp(3em, calc(-0.875em + 8.333vw), 4em);
+            @include mixins.clamp(3em, 4em);
             font-weight: 900;
             color: var(--bg-color);
             text-align: center;
@@ -62,14 +62,14 @@
             gap: 1em;
 
             h2 {
-                font-size: clamp(2em, calc(-0.875em + 8.333vw), 2.5em);
+                @include mixins.clamp(2em, 2.5em);
                 font-weight: 800;
                 color: #b73743;
                 text-align: center;
             }
 
             p {
-                font-size: clamp(1em, calc(-0.875em + 8.333vw), 1.2em);
+                @include mixins.clamp(1em, 1.2em);
                 font-weight: 600;
                 color: var(--color);
                 text-align: center;

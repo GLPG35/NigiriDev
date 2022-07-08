@@ -24,7 +24,7 @@
   box-shadow: 10px 10px 10px rgba(12, 12, 12, 0.5019607843) !important;
 }
 
-*, *::before, *::after {
+*, *::before, .container1 .contact form button::after, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -336,17 +336,15 @@ footer .social .pic img {
     align-items: center;
   }
 }
-.container1 {
+.container1, .container1 .hero {
   min-height: calc(100vh - 4em);
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 .container1 .hero {
-  width: 100%;
+  min-height: 0;
   height: 10em;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(175deg, #ff5548, #b73743);
@@ -394,8 +392,7 @@ footer .social .pic img {
 .container1 .contact form input:focus {
   border: 2px solid rgba(255, 84, 72, 0.7333333333);
 }
-.container1 .contact form .subject,
-.container1 .contact form textarea {
+.container1 .contact form .subject, .container1 .contact form textarea {
   grid-column: span 4;
 }
 .container1 .contact form textarea {
@@ -433,7 +430,7 @@ footer .social .pic img {
   align-items: center;
   justify-content: center;
 }
-.container1 .contact form button::before {
+.container1 .contact form button::before, .container1 .contact form button::after {
   position: absolute;
   content: "";
   width: 95%;
@@ -445,21 +442,13 @@ footer .social .pic img {
   transition: 0.5s ease-out;
 }
 .container1 .contact form button::after {
-  position: absolute;
-  content: "";
   width: 85%;
-  height: 100%;
-  top: 0;
-  background-color: var(--button-ps);
-  border-radius: 50vh;
-  z-index: -1;
-  transition: 0.5s ease-out;
 }
 .container1 .contact form button:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-.container1 .contact form button:hover::before {
+.container1 .contact form button:hover::before, .container1 .contact form button:hover::after {
   transform: translateY(5px);
 }
 .container1 .contact form button:hover::after {

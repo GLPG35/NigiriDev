@@ -1,0 +1,12 @@
+{
+  "name": "nigiridev",
+  "version": "3.3.2",
+  "description": "This website was made for selling Sushi for developers.",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch scss:css"
+  },
+  "keywords": [],
+  "author": "Gian Luca Porto",
+  "license": "MIT"
+}

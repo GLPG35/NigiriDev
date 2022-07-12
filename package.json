@@ -1,6 +1,6 @@
 {
   "name": "nigiridev",
-  "version": "3.3.2",
+  "version": "3.3.3",
   "description": "This website was made for selling Sushi for developers.",
   "main": "index.js",
   "scripts": {

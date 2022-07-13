@@ -338,7 +338,7 @@ footer .social .pic img {
 }
 .container1 {
   width: 100%;
-  min-height: calc(100vh - 4em);
+  height: max-content;
   display: flex;
   flex-direction: column;
   padding: 1em;
@@ -511,7 +511,7 @@ footer .social .pic img {
   filter: saturate(150%);
 }
 .container1 .subContainer1 .item span {
-  font-size: 1.2em;
+  font-size: clamp(1.2em, -0.875em + 8.333vw, 1.2vw);
   font-weight: 700;
   color: #ff5548;
 }
@@ -568,12 +568,12 @@ footer .social .pic img {
   gap: 0.5em;
 }
 .container2 .row .info h3 {
-  font-size: clamp(1.5em, -0.875em + 8.333vw, 2em);
+  font-size: clamp(1.5em, -0.875em + 8.333vw, 2vw);
   font-weight: 700;
   color: #ff5548;
 }
 .container2 .row .info p {
-  font-size: 1em;
+  font-size: 1vw;
   font-weight: 600;
   color: var(--color);
 }

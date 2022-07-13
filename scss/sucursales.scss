@@ -34,7 +34,7 @@
 
         h1 {
             position: absolute;
-            @include mixins.clamp(3em, 4em);
+            @include mixins.clamp(3em, 4vw);
             font-weight: 900;
             color: var(--bg-color);
             text-align: center;
@@ -62,14 +62,14 @@
             gap: 1em;
 
             h2 {
-                @include mixins.clamp(2em, 2.5em);
+                @include mixins.clamp(2em, 2.5vw);
                 font-weight: 800;
                 color: #b73743;
                 text-align: center;
             }
 
             p {
-                @include mixins.clamp(1em, 1.2em);
+                @include mixins.clamp(1em, 1.2vw);
                 font-weight: 600;
                 color: var(--color);
                 text-align: center;

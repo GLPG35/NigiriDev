@@ -378,12 +378,12 @@ footer .social .pic img {
   gap: 1em;
 }
 .container1 .container-fluid .row .info h3 {
-  font-size: clamp(1.5em, -0.875em + 8.333vw, 1.8em);
+  font-size: clamp(1.5em, -0.875em + 8.333vw, 1.8vw);
   font-weight: 700;
   color: #ff5548;
 }
 .container1 .container-fluid .row .info p {
-  font-size: clamp(0.9em, -0.875em + 8.333vw, 1em);
+  font-size: clamp(0.9em, -0.875em + 8.333vw, 1vw);
   color: var(--color);
 }
 

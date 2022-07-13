@@ -357,13 +357,13 @@ footer .social .pic img {
   text-align: right;
 }
 .container1 .hero h1 {
-  font-size: clamp(3em, -0.875em + 8.333vw, 4em);
+  font-size: clamp(3em, -0.875em + 8.333vw, 4vw);
   font-weight: 800;
   text-transform: uppercase;
   color: #b73743;
 }
 .container1 .hero span {
-  font-size: clamp(1em, -0.875em + 8.333vw, 1.5em);
+  font-size: clamp(1em, -0.875em + 8.333vw, 1.5vw);
   font-weight: 600;
   color: #ff5548;
 }

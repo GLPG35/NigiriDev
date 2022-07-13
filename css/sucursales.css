@@ -365,7 +365,7 @@ footer .social .pic img, footer .social .container1 .hero .pic img img, .contain
 }
 .container1 .hero h1 {
   position: absolute;
-  font-size: clamp(3em, -0.875em + 8.333vw, 4em);
+  font-size: clamp(3em, -0.875em + 8.333vw, 4vw);
   font-weight: 900;
   color: var(--bg-color);
   text-align: center;
@@ -390,13 +390,13 @@ footer .social .pic img, footer .social .container1 .hero .pic img img, .contain
   gap: 1em;
 }
 .container1 .container-fluid .info h2 {
-  font-size: clamp(2em, -0.875em + 8.333vw, 2.5em);
+  font-size: clamp(2em, -0.875em + 8.333vw, 2.5vw);
   font-weight: 800;
   color: #b73743;
   text-align: center;
 }
 .container1 .container-fluid .info p {
-  font-size: clamp(1em, -0.875em + 8.333vw, 1.2em);
+  font-size: clamp(1em, -0.875em + 8.333vw, 1.2vw);
   font-weight: 600;
   color: var(--color);
   text-align: center;

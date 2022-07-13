@@ -33,14 +33,14 @@ $OpenSans: (
         text-align: right;
 
         h1 {
-            @include mixins.clamp(3em, 4em);
+            @include mixins.clamp(3em, 4vw);
             font-weight: map-get($OpenSans, 'extrabold');
             text-transform: uppercase;
             color: #b73743;
         }
 
         span {
-            @include mixins.clamp(1em, 1.5em);
+            @include mixins.clamp(1em, 1.5vw);
             font-weight: map-get($OpenSans, 'semibold');
             color: #ff5548;
         }

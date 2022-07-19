@@ -52,7 +52,8 @@
                 }
 
                 p {
-                    @include mixins.clamp(0.9em, 1vw);
+                    @include mixins.clamp(0.9em, 1.1vw);
+                    font-weight: 600;
                     color: var(--color);
                 }
             }

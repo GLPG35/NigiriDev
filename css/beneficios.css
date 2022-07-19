@@ -383,7 +383,8 @@ footer .social .pic img {
   color: #ff5548;
 }
 .container1 .container-fluid .row .info p {
-  font-size: clamp(0.9em, -0.875em + 8.333vw, 1vw);
+  font-size: clamp(0.9em, -0.875em + 8.333vw, 1.1vw);
+  font-weight: 600;
   color: var(--color);
 }
 

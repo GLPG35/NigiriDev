@@ -53,7 +53,7 @@
 
                 p {
                     @include mixins.clamp(0.9em, 1.1vw);
-                    font-weight: 600;
+                    font-weight: 500;
                     color: var(--color);
                 }
             }

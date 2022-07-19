@@ -574,7 +574,7 @@ footer .social .pic img {
 }
 .container2 .row .info p {
   font-size: clamp(0.9em, -0.875em + 8.333vw, 1.2vw);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color);
 }
 .container2 .row .pic {

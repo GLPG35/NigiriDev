@@ -1,7 +1,8 @@
 const colorScheme = window.matchMedia('(prefers-color-scheme: dark)')
 const toggleSwitch = document.querySelector('.inputToggle')
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
-const icon = document.querySelector('.icon')
+const icon = document.querySelector('.fa-bars')
+const icon2 = document.querySelector('.fa-times')
 const menu = document.querySelector('header ul')
 
 const isChecked = () => {
@@ -52,4 +53,5 @@ window.addEventListener('load', () => {
 
 toggleSwitch.addEventListener('change', isChecked)
 icon.addEventListener('click', menuToggle)
+icon2.addEventListener('click', menuToggle)
 window.addEventListener('resize', responsive)

@@ -211,23 +211,28 @@ header {
     -webkit-backdrop-filter: blur(10px);
     z-index: 10;
 
-    .icon {
-        height: 95%;
-        aspect-ratio: 1 / 1;
+    i {
+        font-size: 1.5em;
+        padding: 0.2em;
+        color: #b73743;
         transition: 0.2s ease-out;
-        z-index: 11;
+
+        &.fa-bars {
+            display: none;
+        }
 
         &:hover {
-            transform: scale(1.1) rotate(-10deg);
             cursor: pointer;
+            color: #ff5448;
         }
+    }
 
-        &:active {
-            transform: scale(0.9) rotate(-10deg);
-        }
+    .nigiriIcon {
+        height: 50%;
+        width: max-content;
 
         img {
-            object-fit: contain;
+            object-fit: cover;
             width: 100%;
             height: 100%;
         }
@@ -241,6 +246,20 @@ header {
         margin-left: auto;
         margin-bottom: 0;
         z-index: 10;
+        position: relative;
+
+        .fakeHeader {
+            height: 4em;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            left: 0;
+            padding-left: 1em;
+            opacity: 0;
+            visibility: hidden;
+        }
 
         a {
             color: #b73743;
@@ -349,16 +368,26 @@ footer {
         .pic {
             height: 50%;
             aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             a {
                 width: 100%;
                 height: 100%;
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
             }
 
-            img {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
+            i {
+                font-size: 1.5em;
+                color: #b73743;
+                transition: 0.2s ease-out;
+
+                &:hover {
+                    color: #ff5448;
+                }
             }
         }
     }
@@ -366,6 +395,16 @@ footer {
 
 @media (max-width: 800px) {
     header {
+        i {
+            &.fa-bars {
+                display: initial;
+            }
+        }
+
+        .nigiriIcon {
+            display: none;
+        }
+
         ul {
             width: 100%;
             height: 100vh;
@@ -384,6 +423,11 @@ footer {
 
             &.active {
                 transform: translateX(0);
+            }
+
+            .fakeHeader {
+                visibility: visible;
+                opacity: 1;
             }
 
             li {

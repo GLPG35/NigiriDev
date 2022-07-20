@@ -180,21 +180,25 @@ header {
   -webkit-backdrop-filter: blur(10px);
   z-index: 10;
 }
-header .icon {
-  height: 95%;
-  aspect-ratio: 1/1;
+header i {
+  font-size: 1.5em;
+  padding: 0.2em;
+  color: #b73743;
   transition: 0.2s ease-out;
-  z-index: 11;
 }
-header .icon:hover {
-  transform: scale(1.1) rotate(-10deg);
+header i.fa-bars {
+  display: none;
+}
+header i:hover {
   cursor: pointer;
+  color: #ff5448;
 }
-header .icon:active {
-  transform: scale(0.9) rotate(-10deg);
+header .nigiriIcon {
+  height: 50%;
+  width: max-content;
 }
-header .icon img {
-  object-fit: contain;
+header .nigiriIcon img {
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -206,6 +210,19 @@ header ul {
   margin-left: auto;
   margin-bottom: 0;
   z-index: 10;
+  position: relative;
+}
+header ul .fakeHeader {
+  height: 4em;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding-left: 1em;
+  opacity: 0;
+  visibility: hidden;
 }
 header ul a {
   color: #b73743;
@@ -299,18 +316,33 @@ footer .social {
 footer .social .pic {
   height: 50%;
   aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 footer .social .pic a {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
-footer .social .pic img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+footer .social .pic i {
+  font-size: 1.5em;
+  color: #b73743;
+  transition: 0.2s ease-out;
+}
+footer .social .pic i:hover {
+  color: #ff5448;
 }
 
 @media (max-width: 800px) {
+  header i.fa-bars {
+    display: initial;
+  }
+  header .nigiriIcon {
+    display: none;
+  }
   header ul {
     width: 100%;
     height: 100vh;
@@ -329,6 +361,10 @@ footer .social .pic img {
   }
   header ul.active {
     transform: translateX(0);
+  }
+  header ul .fakeHeader {
+    visibility: visible;
+    opacity: 1;
   }
   header ul li {
     width: 50%;
